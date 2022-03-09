@@ -85,5 +85,69 @@ def function5():
 
 #11. Ecrire un programme qui transcrit un nombre en paramètre en binaire en gardant les 0 devant
 #12. La même chose pour l’hexadecimal
-#13. Ecrire une fonction Qui trace un carré d’étoile de taille n
-#14. Ecrire une fonction qui trace un triangle d’étoile de taille n
+# 13. Ecrire une fonction Qui trace un carré d’étoile de taille n
+def function13():
+    nombre = int(raw_input('Nombre : '))
+    ligne=''
+    espace=0
+    for i in range(nombre):
+        if(i==0):
+            for j in range(nombre):
+                ligne+='*'
+            print(ligne)
+            ligne=''
+        else:
+            if(i==nombre-1):
+                for k in range(nombre):
+                    ligne+='*'
+                print(ligne)
+                ligne=''
+            else:
+                ligne='*'
+                espace=nombre-2
+                while(espace!=0):
+                    ligne+=' '
+                    espace-=1
+                ligne+='*'
+                print(ligne)
+                ligne=''
+
+
+# 14. Ecrire une fonction qui trace un triangle d’étoile de taille n
+def function14():
+    nombre = int(raw_input('Nombre : '))
+    ligne=''
+    cpt=0
+    espace=0
+    ecart=0
+    for i in range(nombre):
+        if(i==nombre-1):
+            for j in range(nombre):
+                ligne+=' *'
+
+            print(ligne)
+            ligne=''
+        else:
+            if(i==0):
+                espace=nombre
+                while(espace!=0):
+                    ligne+=' '
+                    espace-=1
+                ligne+='*'
+                print(ligne)
+                ligne=''
+                espace=0
+            else:
+                espace = nombre-i
+                ecart=i*2
+                while (espace != 0):
+                    ligne += ' '
+                    espace -= 1
+                ligne += '*'
+                while(ecart!=1):
+                    ligne+=' '
+                    ecart-=1
+                ligne += '*'
+                print(ligne)
+                ligne = ''
+                espace = 0
