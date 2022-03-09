@@ -62,17 +62,28 @@ def function4():
  
 
 #7. Ecrire une fonction qui prend deux liste en paramètres et renvoie tous les elements communs au deux listes
-liste1=[1,3,4,7,9,2]
-liste2=[4,8,2,3,1,3]
-liste3=[]
-for i in liste1:
-    for j in liste2:
-        if(i==j):
-            liste3.append(i)
-for i in liste3:
-    print (liste3[i])
+def function5():     
+    liste1=[1,3,4,7,9,2]
+    liste2=[4,8,2,3,1,3]
+    liste3=[]
+    for i in liste1:
+        for j in liste2:
+            if(i==j):
+                liste3.append(i) 
+                print('i = '+str(i))
+                break
+ 
+    for x in liste3:
+        print (liste3[x-1])
 #8. Ecrire une fonction qui determine si une chaine de caractère est un palyndrome
-palyndrome=int(input('Nombre 1 : '))
+
+#palyndrome=int(input('mot : '))
+
 #9. Ecrire une fonction qui enelve tout les doublons d'une liste
 
 #10. Ecrire une fonction qui valide si une adresse IP est valide.
+
+#11. Ecrire un programme qui transcrit un nombre en paramètre en binaire en gardant les 0 devant
+#12. La même chose pour l’hexadecimal
+#13. Ecrire une fonction Qui trace un carré d’étoile de taille n
+#14. Ecrire une fonction qui trace un triangle d’étoile de taille n
